@@ -310,13 +310,13 @@
 
 .badge-1 {
   top: 10%;
-  right: -10%;
+  right: -3%;
   animation: badgeFloat 4s 0.5s ease-in-out infinite;
 }
 
 .badge-2 {
   bottom: 20%;
-  right: -14%;
+  right: -1%;
   animation: badgeFloat 4.5s 1s ease-in-out infinite;
 }
 
