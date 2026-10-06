@@ -7,12 +7,18 @@
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: var(--sp-12);
-  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.contact-info {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
 /* ---- Contact Info ---- */
 .contact-info {
   display: flex;
