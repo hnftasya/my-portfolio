@@ -1,0 +1,153 @@
+/* ============================================================
+   ORGANIZATION SECTION
+   ============================================================ */
+
+.organization {
+  background: var(--surface-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.organization::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(232,160,191,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* ---- Org Card ---- */
+.org-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: var(--sp-10) var(--sp-12);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: border-color var(--t-normal), box-shadow var(--t-normal);
+}
+
+.org-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Decorative gradient line at top */
+.org-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: var(--sp-10); right: var(--sp-10);
+  height: 3px;
+  background: var(--gradient-primary);
+  border-radius: 0 0 var(--r-full) var(--r-full);
+}
+
+.org-header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-8);
+  padding-bottom: var(--sp-6);
+  border-bottom: 1px solid var(--border);
+}
+
+.org-icon-wrap {
+  flex-shrink: 0;
+}
+
+.org-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--r-lg);
+  background: var(--gradient-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+
+.org-meta {
+  flex: 1;
+}
+
+.org-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-3);
+}
+
+.org-badge {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 2px var(--sp-3);
+  border-radius: var(--r-full);
+}
+
+.org-badge.accent {
+  color: var(--accent-dark);
+  background: var(--accent-3);
+  border-color: var(--accent);
+}
+
+.org-title {
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--sp-1);
+  line-height: 1.25;
+}
+
+.org-university {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* ---- Responsibilities ---- */
+.org-label {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: var(--sp-4);
+}
+
+.org-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.org-list li {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  padding-left: var(--sp-6);
+  position: relative;
+}
+
+.org-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .org-card { padding: var(--sp-6) var(--sp-6); }
+  .org-card::before { left: var(--sp-6); right: var(--sp-6); }
+  .org-header { flex-direction: column; gap: var(--sp-4); }
+}

@@ -1,0 +1,126 @@
+/* ============================================================
+   SKILLS SECTION
+   ============================================================ */
+
+.skills {
+  background: var(--bg);
+  position: relative;
+}
+
+.skills::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-6);
+}
+
+/* ---- Card ---- */
+.skills-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: var(--sp-8);
+  transition: border-color var(--t-normal), box-shadow var(--t-normal), transform var(--t-normal);
+}
+
+.skills-card:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.skills-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+  padding-bottom: var(--sp-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.skills-icon {
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-soft);
+  border-radius: var(--r-md);
+  flex-shrink: 0;
+}
+
+.skills-card-header h3 {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ---- Pills ---- */
+.skills-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.skill-pill {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--r-full);
+  cursor: default;
+  transition: transform var(--t-fast), box-shadow var(--t-fast);
+  user-select: none;
+}
+
+.skill-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Technical — pink */
+.skill-pill.tech {
+  background: rgba(232,160,191,0.15);
+  color: var(--accent-dark);
+  border: 1px solid rgba(232,160,191,0.35);
+}
+
+/* Professional — lavender */
+.skill-pill.pro {
+  background: rgba(201,184,240,0.15);
+  color: var(--accent-2-dark);
+  border: 1px solid rgba(201,184,240,0.35);
+}
+
+/* Strengths — soft mixed */
+.skill-pill.str {
+  background: linear-gradient(135deg, rgba(232,160,191,0.1), rgba(201,184,240,0.1));
+  color: var(--text-secondary);
+  border: 1px solid rgba(201,184,240,0.25);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .skills-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-card:last-child {
+    grid-column: auto;
+  }
+}

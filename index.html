@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanifah Tasya — Informatics Engineering Student</title>
+  <meta name="description" content="Personal portfolio of Hanifah Tasya, an Informatics Engineering student at Indraprasta PGRI University. Skilled in tech, design, and business." />
+  <meta name="keywords" content="Hanifah Tasya, portfolio, informatics engineering, web developer, UI/UX designer" />
+  <meta property="og:title" content="Hanifah Tasya — Portfolio" />
+  <meta property="og:description" content="Informatics Engineering Student | Tech · Design · Business · Problem Solving" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="src/styles/global.css" />
+  <link rel="stylesheet" href="src/styles/navbar.css" />
+  <link rel="stylesheet" href="src/styles/hero.css" />
+  <link rel="stylesheet" href="src/styles/about.css" />
+  <link rel="stylesheet" href="src/styles/skills.css" />
+  <link rel="stylesheet" href="src/styles/experience.css" />
+  <link rel="stylesheet" href="src/styles/organization.css" />
+  <link rel="stylesheet" href="src/styles/projects.css" />
+  <link rel="stylesheet" href="src/styles/contact.css" />
+  <link rel="stylesheet" href="src/styles/footer.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" id="nav-logo">HT<span class="logo-dot">.</span></a>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+        <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link" id="nav-experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+        <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-container">
+      <div class="hero-content" id="hero-content">
+        <div class="hero-badge">👋 Available for Internship & Projects</div>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Hanifah Tasya</span>
+        </h1>
+        <p class="hero-subtitle">Informatics Engineering Student</p>
+        <div class="hero-tags">
+          <span class="tag">✦ Tech</span>
+          <span class="tag">✦ Design</span>
+          <span class="tag">✦ Business</span>
+          <span class="tag">✦ Problem Solving</span>
+        </div>
+        <p class="hero-description">
+          Passionate about building digital solutions that blend technical skill with
+          creative design. Currently studying at Indraprasta PGRI University,
+          growing through real-world work and organizational experience.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-primary" id="hero-view-work">View My Work</a>
+          <a href="#contact" class="btn btn-secondary" id="hero-contact">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-image" id="hero-image">
+        <div class="hero-avatar-wrap">
+          <div class="hero-avatar">
+            <img src="src/assets/projects/foto asya .png" alt="Asya profile photo">
+          </div>
+          <div class="avatar-ring ring-1"></div>
+          <div class="avatar-ring ring-2"></div>
+          <div class="avatar-blob"></div>
+        </div>
+        <div class="floating-badge badge-1">🎓 Informatics</div>
+        <div class="floating-badge badge-2">💻 Developer</div>
+        <div class="floating-badge badge-3">🎨 Designer</div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" id="scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="about section" id="about">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">Get to know me</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="about-lead">
+            I'm an Informatics Engineering student with a passion for technology,
+            design, and entrepreneurship. I believe in learning through doing —
+            from managing a food business to serving customers on the retail floor
+            and crafting digital interfaces in Figma.
+          </p>
+          <p class="about-body">
+            My journey blends academic study with hands-on work experience, giving
+            me a grounded perspective on how technology meets real-world challenges.
+            I thrive in dynamic environments, enjoy solving complex problems, and
+            am always eager to grow through new opportunities.
+          </p>
+          <a href="#contact" class="btn btn-primary" id="about-cta">Let's Connect</a>
+        </div>
+        <div class="about-cards reveal">
+          <div class="info-card" id="info-university">
+            <div class="info-icon">🎓</div>
+            <div class="info-body">
+              <span class="info-label">University</span>
+              <span class="info-value">Indraprasta PGRI University</span>
+            </div>
+          </div>
+          <div class="info-card" id="info-major">
+            <div class="info-icon">💻</div>
+            <div class="info-body">
+              <span class="info-label">Major</span>
+              <span class="info-value">Informatics Engineering</span>
+            </div>
+          </div>
+          <div class="info-card" id="info-year">
+            <div class="info-icon">📅</div>
+            <div class="info-body">
+              <span class="info-label">Year</span>
+              <span class="info-value">2023 – Present</span>
+            </div>
+          </div>
+          <div class="info-card" id="info-status">
+            <div class="info-icon">🟢</div>
+            <div class="info-body">
+              <span class="info-label">Status</span>
+              <span class="info-value">Open to Opportunities</span>
+            </div>
+          </div>
+          <div class="info-card" id="info-location">
+            <div class="info-icon">📍</div>
+            <div class="info-body">
+              <span class="info-label">Location</span>
+              <span class="info-value">Jatisampurna, West Java</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="skills section" id="skills">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">What I bring</span>
+        <h2 class="section-title">Skills & Expertise</h2>
+      </div>
+      <div class="skills-grid">
+        <!-- Technical Skills -->
+        <div class="skills-card reveal" id="skills-technical">
+          <div class="skills-card-header">
+            <div class="skills-icon">🛠️</div>
+            <h3>Technical & Digital</h3>
+          </div>
+          <div class="skills-pills">
+            <span class="skill-pill tech">Canva</span>
+            <span class="skill-pill tech">Figma</span>
+            <span class="skill-pill tech">Microsoft Word</span>
+            <span class="skill-pill tech">Microsoft Excel</span>
+            <span class="skill-pill tech">Microsoft PowerPoint</span>
+            <span class="skill-pill tech">MySQL</span>
+            <span class="skill-pill tech">PHP</span>
+            <span class="skill-pill tech">Java</span>
+          </div>
+        </div>
+        <!-- Professional Skills -->
+        <div class="skills-card reveal" id="skills-professional">
+          <div class="skills-card-header">
+            <div class="skills-icon">💼</div>
+            <h3>Professional</h3>
+          </div>
+          <div class="skills-pills">
+            <span class="skill-pill pro">Customer Service</span>
+            <span class="skill-pill pro">Sales</span>
+            <span class="skill-pill pro">Small Business Operations</span>
+            <span class="skill-pill pro">Product Promotion</span>
+            <span class="skill-pill pro">Transaction Handling</span>
+            <span class="skill-pill pro">Inventory Management</span>
+            <span class="skill-pill pro">Team Collaboration</span>
+          </div>
+        </div>
+        <!-- Workplace Strengths -->
+        <div class="skills-card reveal" id="skills-strengths">
+          <div class="skills-card-header">
+            <div class="skills-icon">⚡</div>
+            <h3>Workplace Strengths</h3>
+          </div>
+          <div class="skills-pills">
+            <span class="skill-pill str">Time Management</span>
+            <span class="skill-pill str">Communication</span>
+            <span class="skill-pill str">Adaptability</span>
+            <span class="skill-pill str">Problem Solving</span>
+            <span class="skill-pill str">Attention to Detail</span>
+            <span class="skill-pill str">Customer Relationship Management</span>
+            <span class="skill-pill str">Work Under Pressure</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE ========== -->
+  <section class="experience section" id="experience">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">My journey</span>
+        <h2 class="section-title">Work Experience</h2>
+      </div>
+      <div class="timeline" id="timeline">
+
+        <!-- FiveBites Mochi -->
+        <div class="timeline-item reveal" id="exp-fivebites">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <div class="timeline-year">2023</div>
+              <span class="timeline-company">FiveBites Mochi</span>
+            </div>
+            <h3 class="timeline-role">Food Business Operator</h3>
+            <ul class="timeline-responsibilities">
+              <li>Managed production, sales, and distribution activities end-to-end.</li>
+              <li>Handled raw material inventory and tracked stock levels.</li>
+              <li>Recorded expenditures and monitored product availability.</li>
+              <li>Conducted product promotion to attract and retain customers.</li>
+              <li>Coordinated with team members to ensure smooth operations.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- RETINA -->
+        <div class="timeline-item reveal" id="exp-retina">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <div class="timeline-year">2024 – 2025</div>
+              <span class="timeline-company">PT Rajut Asa Gemilang (RETINA)</span>
+            </div>
+            <h3 class="timeline-role">Sales Associate</h3>
+            <ul class="timeline-responsibilities">
+              <li>Handled fashion sales transactions with professionalism and accuracy.</li>
+              <li>Provided exceptional customer service to build loyalty.</li>
+              <li>Explained product features and styling recommendations to customers.</li>
+              <li>Addressed customer inquiries and resolved complaints effectively.</li>
+              <li>Maintained transaction records and sales reports.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Ramira Coffee -->
+        <div class="timeline-item reveal" id="exp-ramira">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <div class="timeline-year">2025</div>
+              <span class="timeline-company">Ramira Coffee</span>
+            </div>
+            <h3 class="timeline-role">Barista</h3>
+            <ul class="timeline-responsibilities">
+              <li>Delivered warm and efficient customer service in a high-traffic café.</li>
+              <li>Managed transactions and handled queue flow during peak hours.</li>
+              <li>Collaborated closely with team members to maintain service speed.</li>
+              <li>Performed well under fast-paced, high-pressure conditions.</li>
+              <li>Operated barista equipment and maintained product quality standards.</li>
+              <li>Upheld cleanliness and hygiene standards throughout shifts.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ORGANIZATION ========== -->
+  <section class="organization section" id="organization">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">Community involvement</span>
+        <h2 class="section-title">Organization</h2>
+      </div>
+      <div class="org-card reveal" id="org-card">
+        <div class="org-header">
+          <div class="org-icon-wrap">
+            <div class="org-icon">🎓</div>
+          </div>
+          <div class="org-meta">
+            <div class="org-badges">
+              <span class="org-badge">2024 – 2025</span>
+              <span class="org-badge accent">Entrepreneurship Division</span>
+            </div>
+            <h3 class="org-title">Informatics Engineering Student Activity Unit</h3>
+            <p class="org-university">Indraprasta PGRI University</p>
+          </div>
+        </div>
+        <div class="org-responsibilities">
+          <p class="org-label">Responsibilities</p>
+          <ul class="org-list">
+            <li>Created and distributed promotional content to support organizational activities.</li>
+            <li>Assisted in event documentation through photography and videography.</li>
+            <li>Managed communication and information dissemination within the unit.</li>
+            <li>Coordinated with other divisions to ensure seamless event execution.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="projects section" id="projects">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">What I've built</span>
+        <h2 class="section-title">Projects</h2>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+
+        <div class="project-card reveal" id="project-task-planner">
+          <div class="project-image-wrap">
+            <img src="src/assets/projects/Taskmate.png" alt="College Task Planner Web Application preview" class="project-image" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://github.com/MHRahim/taskmate" class="btn btn-overlay" id="btn-task-planner">View Project</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">TaskMate</h3>
+            <p class="project-description">A web application for organizing college assignments, deadlines, and schedules in one unified dashboard.</p>
+            <div class="project-tools">
+              <span class="tool-badge">Figma</span>
+              <span class="tool-badge">HTML</span>
+              <span class="tool-badge">CSS</span>
+              <span class="tool-badge">JavaScript</span>
+            </div>
+          </div>
+        </div>
+
+       
+        <div class="project-card reveal" id="project-infosystem">
+          <div class="project-image-wrap">
+            <img src="src/assets/projects/info-system.png" alt="Simple Information System preview" class="project-image" loading="lazy" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-overlay" id="btn-infosystem">View Project</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Simple Information System</h3>
+            <p class="project-description">A CRUD-based information system with MySQL database integration for managing and displaying structured data.</p>
+            <div class="project-tools">
+              <span class="tool-badge">PHP</span>
+              <span class="tool-badge">MySQL</span>
+              <span class="tool-badge">HTML</span>
+              <span class="tool-badge">CSS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="contact section" id="contact">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <span class="section-label">Let's talk</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Have an opportunity or just want to say hi? My inbox is always open.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal" id="contact-info">
+          <div class="contact-item" id="contact-email">
+            <div class="contact-icon">📧</div>
+            <div class="contact-detail">
+              <span class="contact-label">Email</span>
+              <a href="mailto:hnftasya@gmail.com" class="contact-value">hnftasya@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-location">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Jatisampurna, West Java</span>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-linkedin">
+            <div class="contact-icon">💼</div>
+            <div class="contact-detail">
+              <span class="contact-label">LinkedIn</span>
+              <a href="#" class="contact-value">linkedin.com/in/hanifahtasya</a>
+            </div>
+          </div>
+          <div class="contact-item" id="contact-github">
+            <div class="contact-icon">🐙</div>
+            <div class="contact-detail">
+              <span class="contact-label">GitHub</span>
+              <a href="#" class="contact-value">github.com/hanifahtasya</a>
+            </div>
+          </div>
+          <div class="contact-availability">
+            <div class="availability-dot"></div>
+            <span>Available for internship & freelance projects</span>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal" id="contact-form-wrap">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group" id="form-group-name">
+              <label for="contact-name" class="form-label">Full Name</label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="Your name" autocomplete="name" />
+              <span class="form-error" id="error-name"></span>
+            </div>
+            <div class="form-group" id="form-group-email">
+              <label for="contact-email-input" class="form-label">Email Address</label>
+              <input type="email" id="contact-email-input" name="email" class="form-input" placeholder="your@email.com" autocomplete="email" />
+              <span class="form-error" id="error-email"></span>
+            </div>
+            <div class="form-group" id="form-group-message">
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea id="contact-message" name="message" class="form-textarea" placeholder="Tell me about your project or opportunity..." rows="5"></textarea>
+              <span class="form-error" id="error-message"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="btn-send-message">
+              <span class="btn-text">Send Message ✉️</span>
+              <span class="btn-loading" hidden>Sending...</span>
+            </button>
+            <div class="form-success" id="form-success" hidden>
+              <span>🎉 Message sent! I'll get back to you soon.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#home" class="footer-logo">HT<span>.</span></a>
+        <p class="footer-tagline">Building with curiosity, designing with purpose.</p>
+      </div>
+      <div class="footer-links" role="list">
+        <a href="#about" role="listitem" class="footer-link">About</a>
+        <a href="#skills" role="listitem" class="footer-link">Skills</a>
+        <a href="#experience" role="listitem" class="footer-link">Experience</a>
+        <a href="#projects" role="listitem" class="footer-link">Projects</a>
+        <a href="#contact" role="listitem" class="footer-link">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Hanifah Tasya. Crafted with ♡</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="src/js/main.js"></script>
+</body>
+</html>

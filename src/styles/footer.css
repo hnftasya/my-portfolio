@@ -1,0 +1,93 @@
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+  background: var(--text-primary);
+  padding: var(--sp-12) 0 var(--sp-8);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+}
+
+.footer-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--sp-8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-6);
+  text-align: center;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+.footer-logo {
+  font-size: var(--fs-2xl);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.04em;
+}
+
+.footer-logo span {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-tagline {
+  font-size: var(--fs-sm);
+  color: rgba(255,255,255,0.45);
+  font-weight: 400;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-1);
+}
+
+.footer-link {
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  color: rgba(255,255,255,0.55);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-sm);
+  transition: color var(--t-fast), background var(--t-fast);
+}
+
+.footer-link:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
+.footer-bottom {
+  padding-top: var(--sp-4);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  width: 100%;
+  text-align: center;
+}
+
+.footer-bottom span {
+  font-size: var(--fs-xs);
+  color: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 768px) {
+  .footer-container { padding: 0 var(--sp-5); }
+}

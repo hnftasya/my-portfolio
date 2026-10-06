@@ -1,0 +1,276 @@
+/* ============================================================
+   GLOBAL CSS — Design Tokens, Reset, Base Styles, Utilities
+   ============================================================ */
+
+/* ---------- Design Tokens ---------- */
+:root {
+  /* Colors */
+  --bg:            #FAFAFA;
+  --surface:       #FFFFFF;
+  --surface-2:     #F5F3FF;
+  --accent:        #E8A0BF;
+  --accent-dark:   #C7739B;
+  --accent-2:      #C9B8F0;
+  --accent-2-dark: #9B7FD4;
+  --accent-3:      #F7D6E8;
+  --text-primary:  #1A1A2E;
+  --text-secondary:#334155;
+  --text-muted:    #64748B;
+  --border:        #EDE9F9;
+  --border-hover:  #C9B8F0;
+  --shadow-sm:     0 2px 8px rgba(200,170,230,0.12);
+  --shadow-md:     0 4px 24px rgba(200,170,230,0.18);
+  --shadow-lg:     0 12px 48px rgba(200,170,230,0.22);
+
+  /* Gradient */
+  --gradient-primary: linear-gradient(135deg, #E8A0BF 0%, #C9B8F0 100%);
+  --gradient-soft:    linear-gradient(135deg, #F7D6E8 0%, #EDE9F9 100%);
+  --gradient-text:    linear-gradient(135deg, #E8A0BF 0%, #9B7FD4 100%);
+
+  /* Typography */
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --fs-xs:   0.75rem;
+  --fs-sm:   0.875rem;
+  --fs-base: 1rem;
+  --fs-md:   1.125rem;
+  --fs-lg:   1.25rem;
+  --fs-xl:   1.5rem;
+  --fs-2xl:  2rem;
+  --fs-3xl:  2.5rem;
+  --fs-4xl:  3rem;
+  --fs-5xl:  3.75rem;
+
+  /* Spacing */
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.25rem;
+  --sp-6:  1.5rem;
+  --sp-8:  2rem;
+  --sp-10: 2.5rem;
+  --sp-12: 3rem;
+  --sp-16: 4rem;
+  --sp-20: 5rem;
+  --sp-24: 6rem;
+  --sp-32: 8rem;
+
+  /* Border radius */
+  --r-sm:   6px;
+  --r-md:   12px;
+  --r-lg:   20px;
+  --r-xl:   28px;
+  --r-full: 9999px;
+
+  /* Transitions */
+  --t-fast:   0.15s ease;
+  --t-normal: 0.25s ease;
+  --t-slow:   0.4s ease;
+
+  /* Layout */
+  --container: 1180px;
+  --nav-h: 72px;
+}
+
+/* ---------- CSS Reset ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font);
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: var(--r-full);
+}
+
+/* ---------- Selection ---------- */
+::selection {
+  background: var(--accent-3);
+  color: var(--text-primary);
+}
+
+/* ---------- Layout Utilities ---------- */
+.section-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--sp-8);
+}
+
+.section {
+  padding: var(--sp-32) 0;
+}
+
+/* ---------- Section Headers ---------- */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--sp-16);
+}
+
+.section-label {
+  display: inline-block;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+  background: var(--accent-3);
+  padding: var(--sp-1) var(--sp-4);
+  border-radius: var(--r-full);
+  margin-bottom: var(--sp-3);
+}
+
+.section-title {
+  font-size: clamp(var(--fs-2xl), 4vw, var(--fs-3xl));
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.15;
+}
+
+.section-subtitle {
+  margin-top: var(--sp-3);
+  color: var(--text-muted);
+  font-size: var(--fs-md);
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- Gradient Text ---------- */
+.gradient-text {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-2);
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--r-full);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  transition: all var(--t-normal);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0);
+  transition: background var(--t-fast);
+}
+
+.btn:hover::after {
+  background: rgba(255,255,255,0.12);
+}
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(232,160,191,0.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(232,160,191,0.55);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent-dark);
+  border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
+  background: var(--accent-3);
+  transform: translateY(-2px);
+}
+
+.btn-overlay {
+  background: rgba(255,255,255,0.95);
+  color: var(--text-primary);
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-overlay:hover {
+  background: #fff;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.btn-full { width: 100%; }
+
+/* ---------- Reveal Animation ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s cubic-bezier(0.16,1,0.3,1),
+              transform 0.6s cubic-bezier(0.16,1,0.3,1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for sibling reveals */
+.reveal:nth-child(1) { transition-delay: 0ms; }
+.reveal:nth-child(2) { transition-delay: 80ms; }
+.reveal:nth-child(3) { transition-delay: 160ms; }
+.reveal:nth-child(4) { transition-delay: 240ms; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  :root { --nav-h: 64px; }
+  .section { padding: var(--sp-20) 0; }
+  .section-container { padding: 0 var(--sp-5); }
+  .section-header { margin-bottom: var(--sp-10); }
+}
